@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>RideMy Way</title>
+  </head>
+  <body>
+    {% include  'includes/_headerincludes.html' %}
+    <div class="container">
+      <!--{% include 'includes/_messages.html' %}-->
+      {% block body%}
+      {%endblock%}
+    </div>
+    {% include  'includes/_footerincludes.html' %}
+  </body>
+</html>

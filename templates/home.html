@@ -1,0 +1,21 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<h1 align="center">Rides available : </h1>
+ <table class="table" align="center">
+  <div class="">
+    <div class="container">
+      {% for rides in rides %}
+      <p> <b>ID </b>  : {{rides.id}}</p>
+      <p> <b>Date</b> : {{rides.create_date}}</p>
+      <p> <b>Ride</b> : {{rides.ride}}</p>
+      <p> <b>Description</b> : {{rides.body}}</p>
+      <p> <b>Driver</b>:{{rides.username}}</p>
+      <p> <a href="/ride/{{rides.id}}"> View details</a> </p>
+      <br>
+     {% endfor %}
+    </div>
+
+  </div>
+ </table>
+{% endblock %}

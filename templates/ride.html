@@ -1,0 +1,20 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+<p>the ride is :{{id}}</p>
+
+<div class="" align="center">
+  {% for rides in rides %}
+  <p> <b>ID </b>  : {{rides.id}}</p>
+  <p> <b>Date</b> : {{rides.create_date}}</p>
+  <h1>Ride : {{rides.ride}}</h1>
+  <h4>Time : {{rides.date}}</h4>
+  <small>Description :{{rides.body}}</small>
+  <hr>
+  <h4>Driver of the ride : {{rides.username}}</h4>
+  {% endfor %}
+</div>
+<!---
+<h1>Single Ride</h1>
+    <p>the ride is :{{id}}</p>-->
+{% endblock %}
