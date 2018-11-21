@@ -13,14 +13,14 @@ def index():
 #user registration route
 @app.route('/register',methods = ['POST'])
 def register():
-    return jsonify({'users': usersdetails})
-    #return render_template('register.html')
+    #return jsonify({'users': usersdetails})
+    return render_template('register.html')
 
 #user login form......and the class
 @app.route('/login', methods= ['POST'])
 def login():
-    return jsonify({'users': usersdetails})
-    #return render_template('login.html')
+    #return jsonify({'users': usersdetails})
+    return render_template('login.html')
 
 #USERS ACCESS AND VIEW THEIR ACCOUNTS DETAILS(ACCOUNT PREVIEW)
 @app.route('/myaccount/<string:name>',methods=['GET'])
@@ -62,7 +62,9 @@ def addride():
     data = request.get_json()
     newride = { "ride" : data['ride']}
     Rides.append(newride)
-    return jsonify({'rideadded': Rides})
+return
+
+    #return jsonify({'rideadded': Rides})
 
 #-------confirmed route working after debugging--------------------------
 @app.route('/ride/<string:name>', methods =['PUT'])
